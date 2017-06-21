@@ -28,26 +28,29 @@
 
 
 const root = $("#root");
+const render = (root, data) => {
+  root.empty();
+}
+
+const update = function() {
+    render(root);
+  }   
 
 const state = {
   screen:null,
   selectScreen:null
 }
+const wrapper = $('<div class="wrapper"></div>'); 
 
-const wrapper = $('<div class="wrapper"></div>');
-  wrapper.append(Header());
-  root.append(wrapper);    
+wrapper.append(Header(update));
+root.append(wrapper); 
 
-
-const render = (root) => {
-  root.empty();
-  const wrapper = $('<div class="wrapper"></div>');
-  wrapper.append(Header());
-  console.log(Header());
-  
-  root.append(wrapper);
-  render(root);
+if(state.screen !== null){
+  wrapper.append(ValNumber());
 }
+
+
+
 
 /*$( _ => {
   getUser((err,data)=> {

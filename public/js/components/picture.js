@@ -1,6 +1,6 @@
 'use strict';
 
-const Header = () => {
+const Header = (state) => {
 	const header = $('<header class = "pictures"></header>');
 	const row = $('<div class="row"></div>');
 	const colum = $('<div class= "large-12 columns"></div>');
@@ -23,6 +23,12 @@ const Header = () => {
 
 	const btn = $('<button class="btn" >REGISTRAME</button>');
 
+	btn.on('click', (e) =>{
+		e.preventDefault();
+		state.selectScreen = 1;//= no me sirve :/
+		$('header').replaceWith(ValNumber());
+	})
+
 	header.append(row);
 	row.append(colum);
 	colum.append(owlCarousel);
@@ -44,12 +50,6 @@ const Header = () => {
 
 	header.append(btn);
 
-	btn.on('click', (e) =>{
-		e.preventDefault();
-	    state.selectedScreen = null;
-	    update();
-
-	})
 
 	return header;
 
