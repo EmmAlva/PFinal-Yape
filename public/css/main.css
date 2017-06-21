@@ -40,6 +40,9 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 	position: absolute;
 	top: 0;
 }
+.lock{
+	width: 7%;
+}
 input[type="number"]{
 	width: 90%;
 	border:none;
@@ -61,4 +64,8 @@ input:focus{
 }
 [type="checkbox"]:focus{
 	background-color:#14B2c9;
+}
+
+span{
+	color: darkgray;
 }
