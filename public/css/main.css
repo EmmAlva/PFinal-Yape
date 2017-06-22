@@ -34,7 +34,12 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 	margin-top: 70px;
 	margin-bottom: 20px;
 }
+.form{
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 20px;
 
+}
 .icons{
 	width: 20%;
 	position: absolute;
@@ -43,11 +48,18 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 .lock{
 	width: 7%;
 }
-input[type="number"]{
-	width: 90%;
+
+input{
 	border:none;
 	border-bottom: 1px solid gray;
 	padding: 10px;	
+
+}
+
+}
+input[type="number"]{
+	width: 90%;
+	
 }
 input[type="checkbox"]{
 	border-style: none;
