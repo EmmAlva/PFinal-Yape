@@ -1,9 +1,9 @@
 'use strict';
-const IngCodigo = () =>{
+const IngCodigo = (userid) =>{
 	const section = $('<section class="register"></section>');
 	const img = $('<img class="logo" src="img/icons/message.png">');
 	const h2 = $('<h2 class="title2">Ahora ingresa tu codigo</h2>');
-	const p = $('<p>Enviamos un SMS con el código de validación al número <span class="codigo"></span></p>');
+	const p = $('<p>Enviamos un SMS con el código de validación al número '+userid+'<span class="codigo"></span></p>');
 	const div =$('<div class="ingreso"></div>');
 	const input = $('<input type="number" maxlength="4" pattern="[0-9]">');
 	const icon = $('<img class= "icons lock" src="img/icons/lock.png">');
@@ -20,11 +20,9 @@ const IngCodigo = () =>{
 	if($('input').val().length == 4){
 		console.log($('input').val());
 		state.selectScreen = 4;//= no me sirve :/
-		setTimeout(2000);
-		$('section').replaceWith(CreaUser());
-		
 	}
 	
+	setTimeout(function(){$('section').replaceWith(CreaUser())},2000);		
 
 	return section;
 }
