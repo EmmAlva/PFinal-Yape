@@ -50,15 +50,3 @@ if(state.screen !== null){
 }
 
 
-
-
-/*$( _ => {
-  getUser((err,data)=> {
-    if(err) console.log(err);
-    const root = $("#root");
-    render(root);
-  });
-})*/
-
-
-

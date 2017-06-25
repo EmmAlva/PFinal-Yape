@@ -20,9 +20,9 @@ const IngCodigo = (userid) =>{
 	if($('input').val().length == 4){
 		console.log($('input').val());
 		state.selectScreen = 4;//= no me sirve :/
+		$('section').replaceWith(CreaUser());		
 	}
-	
-	setTimeout(function(){$('section').replaceWith(CreaUser())},2000);		
+
 
 	return section;
 }
